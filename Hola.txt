@@ -1,0 +1,2 @@
+Hoy aprendimos a hacer una copia de un repositorio.
+También a crear una wiki dentro del repositorio.
