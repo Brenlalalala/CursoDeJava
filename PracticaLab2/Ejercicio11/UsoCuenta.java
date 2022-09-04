@@ -5,30 +5,16 @@ import java.util.Scanner;
 public class UsoCuenta {
     public static void main(String[] args) {
 
-        Scanner scaner=new Scanner(System.in);
+        Scanner scaner =new Scanner(System.in);
 
-        CuentaCorriente cuenta1 = new CuentaCorriente();
-        System.out.print ("Introduzca el nombre del titular: ");
-        String titular = scaner.nextLine();
-        System.out.print ("Introduzca el saldo inicial: ");
-        Double saldo = scaner.nextDouble();
-
-
-        CuentaCorriente cuenta2 = new CuentaCorriente();
-
-//Pedimos el importe al usuario por consola
-        Double importe = 0.0;
-        System.out.print ("\nIntroduzca el importe a transferir entre cuentas: ");
-        importe = scaner.nextDouble();
-        //Hacemos una transferencia desde la Cta1 a la Cta2
-        //cuenta1.Transferencia(cuenta1, cuenta2, importe);
-
-
-        //Mostramos los datos de las cuentas bancarias por consola
-
-        cuenta1.verInformacion();
-       cuenta2.verInformacion();
-
+        CuentaCorriente cuenta1 = new CuentaCorriente(500,"Brenda");
+        System.out.println(cuenta1.getdatosDelaCuenta());
+        CuentaCorriente cuenta2 = new CuentaCorriente(500,"Pepe");
+        System.out.println(cuenta2.getdatosDelaCuenta());
+        System.out.println("Ingrese el importe a transferir:");
+        double importe = scaner.nextDouble();
+        cuenta1.Transferencia(cuenta2, importe);
+        System.out.println("\nNuevo saldo:$ "+ cuenta1.getSaldoCuenta());
 
     }
 }
