@@ -10,7 +10,7 @@ public class CuentaCorriente {
     public CuentaCorriente(double saldo, String nombreTitular) {
     this.saldo = saldo;
     this.nombreTitular = nombreTitular;
-    this.numeroDeCuenta = (int)(Math.random()*100);//para asignar un n° de cta aleatorio y para redondear
+    this.numeroDeCuenta = (int)(Math.random()*100);
     }
 
     public void setSaldo(double saldo) {
